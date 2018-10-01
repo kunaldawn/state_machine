@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.10.3
+    working_directory: /go/src/github.com/kunaldawn/state_machine
+    steps:
+      - checkout
+      - run: go test -v ./...
